@@ -22,7 +22,11 @@ def assembled_matrix
   # Organic standards require that organic products be stored ABOVE conventional, not the other way around
   # Make sure conventional produce is first, on the 'zeroth' / 'bottom' shelf
   
-  assembled_matrix = [CONVENTIONAL_PRODUCE], [ORGANIC_PRODUCE]
+  assembled_matrix = [
+    ["Grapefruit", "Pineapple", "Oranges", "Watermelon", "Eggplant"], 
+    ["Strawberries", "Potatoes", "Grapes", "Avocadoes", "Asparagus"]
+    ]
+    
 end
 
 def sorted_matrix
@@ -42,6 +46,7 @@ def matrix_lookup(matrix, row, column)
   # Return the matrix's content at that row and and column
   
   matrix[row][column]
+  matrix[row][column]
   
 end
 
@@ -50,7 +55,7 @@ def matrix_update(matrix, row, column, new_value)
   # Update the matrix location at that row and column to have the value of new_value
   # Return the updated matrix
   
-  matrix_update = matrix[row][column] = new_value
+  matrix[row][column] = new_value
   matrix
   
 end
